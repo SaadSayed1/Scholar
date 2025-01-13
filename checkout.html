@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Checkout</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <div class="main-banner1" id="top">
+  <header class="header-area header-sticky">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <h1>Scholar</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                  
+                       <!-- ***** Menu Start ***** -->
+                       <ul class="nav">
+                        <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="contact.html">Contact Us</a></li>
+                        <li class="scroll-to-section"><a href="about.html">About Us</a></li>
+                          <li class="scroll-to-section"><a href="course.html">Courses</a></li>
+                          <li class="scroll-to-section"><a href="team.html">Team</a></li>
+                            <div class="dropdown">
+                              <button class="dropbtn">Pages ▼</button>
+                              <div class="dropdown-content">
+                                <!--<a href="team.html">Our Team</a>-->
+                                <a href="refund-cancellation.html">Cancellation & Refund</a>
+                                <a href="terms-conditions.html">Terms & Conditions</a>
+                                <a href="privacy-policies.html">Privacy Policy</a>
+                                <a href="shipping-delivery.html">Shipping & Delivery</a>
+                              </div>
+                            </div>
+    
+                          
+                          
+                      </ul>
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  </div>
+  <br>
+  <!-- ***** Header Area End ***** -->
+
+
+    <div class="container">
+      
+      <form>
+    <!-- Main Category Dropdown -->
+        <h1>Checkout</h1>
+        <form action="/submit" method="POST">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+    
+          <label for="contactNumber">Contact Number</label>
+          <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter your contact number" required>
+    
+          <label for="emailAddress">Email Address</label>
+          <input type="email" id="emailAddress" name="emailAddress" placeholder="Enter your email address" required>
+    
+          <label for="address">Your Address</label>
+          <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+    
+        <label for="mainCategory">Select Category</label>
+        <select id="mainCategory" onchange="updateSubCategory()">
+          <option value="">--Select a Category--</option>
+          <option value="Development">Development</option>
+          <option value="Design">Design</option>
+          <option value="Graphics">Graphics</option>
+          <option value="Marketing">Marketing</option>
+        </select>
+  
+        <!-- Sub-Category Dropdown -->
+        <label for="subCategory">Select Course</label>
+        <select id="subCategory" onchange="updatePrice()" disabled>
+          <option value="">--Select a Course--</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Game Development">Game Development</option>
+          <option value="App Developmen">App Development</option>
+          <option value="Web Designt">Web Design</option>
+          <option value="Game Design">Game Design</option>
+          <option value="Logo Design">Logo Design</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Content Creation">Content Creation</option>
+          <option value="Seo Optimisation">Seo Optimisation</option>
+          <option value="Animation">Animation</option>
+          <option value="Video Editing">Video Editing</option>
+          <option value="Photography">Photography</option>
+          
+        </select>
+  
+        <!-- Price Display -->
+        <div class="price">Price: ₹<span id="price">0</span></div>
+  
+        <button class="open-popup-btn button" id="openPopupBtn" type="submit">Buy Now</button>
+        
+        <!-- The Popup -->
+        <div class="popup" id="popup">
+          <div class="popup-content">
+            <span class="close" id="closePopupBtn">&times;</span>
+            <h2>Purchase successful</h2>
+            <p>Thank you for purchasing our course!</p>
+            <p><a href="index.html">Click here</a> to return to the Home Page</p>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+      </form>
+    </div>
+  
+
+    
+
+
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- Get In Touch Column -->
+          <div class="footer-column">
+              <h4 class="footer-h4">Get In Touch</h4>
+              <ul>
+                  <li>
+                      <i class="fa fa-map-marker-alt me-2"></i> 
+                      101, Mastermind I, Goregaon (E), Royal Palms, Mumbai, Maharashtra, 400065
+                  </li>
+                  <li>
+                      <a href="mailto:info@ngmtechgrowth.com">info@ngmtechgrowth.com</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- Quick Links Column -->
+          <div class="footer-column">
+              <h4 class="footer-h4">Quick Links</h4>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="course.html">Courses</a></li>
+                  <li><a href="team.html">Team</a></li>
+              </ul>
+          </div>
+          <!-- Popular Links Column -->
+          <div class="footer-column">
+              <h4 class="footer-h4">Popular Links</h4>
+              <ul>
+                  <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                  <li><a href="refund-cancellation.html">Cancellation & Refund</a></li>
+                  <li><a href="privacy-policies.html">Privacy Policy</a></li>
+                  <li><a href="shipping-delivery.html">Shipping & Delivery</a></li>
+              </ul>
+          </div>
+          <!-- Buy Our Books Column -->
+          <div class="footer-column buy-button">
+              <h4 class="footer-h4">Buy Our Courses</h4>
+              <span style="color: white;">Click below to buy our courses.</span>
+              <a href="checkout.html" class="buy-now-btn">Buy Now</a>
+          </div>
+      </div>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom text-center">
+          &copy; Scholar, All Rights Reserved.
+      </div>
+    </footer>
+
+  <!-- Scripts -->
+
+  <script>
+    // Data for dropdowns and prices (in INR)
+    const courseData = {
+      Development: {
+        "Web Development": 340,
+        "Game Development": 640,
+        "App Development": 450,
+      },
+      Graphics: {
+        "Video Editing":240,
+        "Animation":240,
+        "Photography":240,
+      },
+      Marketing: {
+        "Digital Marketing": 240,
+        "Content Creation": 240,
+        "Seo Optimisation": 240,
+      
+      },
+      Design: {
+        "Web Design ": 160,
+        "Game Design": 320,
+        "Logo Design": 240,
+      }
+
+    };
+  
+      // Update the sub-category dropdown based on the main category
+      function updateSubCategory() {
+        const mainCategory = document.getElementById("mainCategory").value;
+        const subCategoryDropdown = document.getElementById("subCategory");
+        const priceDisplay = document.getElementById("price");
+  
+        // Reset sub-category and price
+        subCategoryDropdown.innerHTML = '<option value="">--Select a Course--</option>';
+        priceDisplay.textContent = "0";
+        subCategoryDropdown.disabled = true;
+  
+        // Populate sub-category if a main category is selected
+        if (mainCategory && courseData[mainCategory]) {
+          subCategoryDropdown.disabled = false;
+          const courses = courseData[mainCategory];
+          for (const course in courses) {
+            const option = document.createElement("option");
+            option.value = courses[course];
+            option.textContent = course;
+            subCategoryDropdown.appendChild(option);
+          }
+        }
+      }
+  
+      // Update the price display based on the selected sub-category
+      function updatePrice() {
+        const subCategoryDropdown = document.getElementById("subCategory");
+        const priceDisplay = document.getElementById("price");
+  
+        // Update price based on selected course
+        const selectedPrice = subCategoryDropdown.value;
+        priceDisplay.textContent = selectedPrice ? selectedPrice : "0";
+      }
+    </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the elements
+        const openPopupBtn = document.getElementById('openPopupBtn');
+        const popup = document.getElementById('popup');
+        const closePopupBtn = document.getElementById('closePopupBtn');
+        const checkoutForm = document.getElementById('checkoutForm');
+
+        // When the "Buy Now" button is clicked
+        openPopupBtn.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Check if the form is valid
+            if (checkoutForm.checkValidity()) {
+                popup.style.display = 'block'; // Show the popup
+            } else {
+                checkoutForm.reportValidity(); // Show validation messages
+            }
+        });
+
+        // When the user clicks on <span> (x), close the popup
+        closePopupBtn.addEventListener('click', function () {
+            popup.style.display = 'none'; // Hide the popup
+        });
+
+        // When the user clicks anywhere outside the popup, close it
+        window.addEventListener('click', function (event) {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+</script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
